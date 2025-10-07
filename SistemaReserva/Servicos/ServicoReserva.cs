@@ -73,6 +73,13 @@ namespace SistemaReserva.Servicos
         {
             return todosQuartos.Where(q => q.Disponivel).ToList();
         }
+
+
+        public Reserva BuscarReservaPorNumeroQuarto(int numeroQuarto)
+        {
+            return Reservas.FirstOrDefault(r => r.Quarto.NumeroQuarto == numeroQuarto);
+        }
+
     }
 }
 
